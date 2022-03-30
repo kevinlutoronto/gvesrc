@@ -1,0 +1,92 @@
+@import "../../styles/base";
+
+.container {
+  position: relative;
+}
+
+.action {
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.revealable {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  top: 0;
+  left: 0;
+  &.openLeft {
+    left: auto;
+  }
+}
+
+.revealed {
+  display: block;
+}
+
+.revealableTopWrapper {
+  box-sizing: border-box;
+  position: absolute;
+  top: -3px;
+  left: -4px;
+  overflow: hidden;
+  padding: 3px 4px 0 4px;
+  height: 33px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.revealableTop {
+  box-sizing: border-box;
+  height: 35px;
+  background-color: $cWhite;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overflow {
+  @extend %icon--overflow;
+}
+
+.labelWithText {
+  color: #252729;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  white-space: nowrap;
+}
+
+.revealableList {
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: $cWhite;
+  position: relative;
+  z-index: 1;
+  padding: 10px 0;
+  margin-top: 30px;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  &.openLeft {
+    left: -100%;
+    margin-right: -40px;
+  }
+}
+
+.revealableListItem {
+  @extend %type--body;
+  box-sizing: border-box;
+  background-color: $cWhite;
+  list-style: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: $cGray600;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../styles/base';
+
+.button {
+  @extend %button--base;
+  @extend %type--body;
+}
+
+.primary {
+  @extend %button--primary;
+}
+
+.secondary {
+  @extend %button--secondary;
+}
+
+.tertiary {
+  @extend %button--tertiary;
+}
+
+.loading {
+  opacity: 0.9;
+  cursor: default;
+  pointer-events: none;
+}
+
+.small {
+  @extend %button--small;
+}

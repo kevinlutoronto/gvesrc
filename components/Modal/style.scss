@@ -1,0 +1,80 @@
+@import '../../styles/base';
+
+@keyframes slidein {
+  from {
+    opacity: .5;
+    top: 20px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes fadeOverlay {
+  from {
+    opacity: .5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.innerWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba($cPurple100, 0.94);
+  z-index: 101;
+  animation-duration: 0.15s;
+  animation-name: fadeOverlay;
+}
+
+.card {
+  position: relative;
+  background: $cWhite;
+  box-shadow: rgba(0,0,0,0.3) 0 5px 10px;
+  z-index: 102;
+  border-radius: 5px;
+  animation-duration: 0.15s;
+  animation-name: slidein;
+  animation-timing-function: ease-out;
+  margin: 40px 0;
+}
+
+.content {
+  @extend %layout--bounds;
+}
+
+.pageActions {
+  display: flex;
+
+  > * + * {
+    margin-left: 20px;
+  }
+}

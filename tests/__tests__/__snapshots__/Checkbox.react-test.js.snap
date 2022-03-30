@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Component render 1`] = `
+<div
+  className=""
+>
+  <div>
+    <label
+      className="wrapper"
+      htmlFor={undefined}
+    >
+      <input
+        checked={false}
+        className="original"
+        disabled={undefined}
+        id={undefined}
+        name="checkbox"
+        onBlur={undefined}
+        onChange={undefined}
+        type="checkbox"
+      />
+      <div
+        className="checkbox"
+      />
+      <div
+        className="text"
+      >
+        Option
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Checkbox Component render 2`] = `
+<div
+  checked={true}
+  className=""
+>
+  <div>
+    <label
+      className="wrapper"
+      htmlFor={undefined}
+    >
+      <input
+        checked={false}
+        className="original"
+        disabled={undefined}
+        id={undefined}
+        name="checkbox"
+        onBlur={undefined}
+        onChange={undefined}
+        type="checkbox"
+      />
+      <div
+        className="checkbox"
+      />
+      <div
+        className="text"
+      >
+        Option
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Checkbox Component render 3`] = `
+<div
+  className="inline"
+>
+  <div>
+    <label
+      className="wrapper fancy"
+      htmlFor={undefined}
+    >
+      <input
+        checked={false}
+        className="original"
+        disabled={undefined}
+        id={undefined}
+        name="checkbox"
+        onBlur={undefined}
+        onChange={undefined}
+        type="checkbox"
+      />
+      <div
+        className="text"
+      >
+        Option
+      </div>
+    </label>
+  </div>
+</div>
+`;

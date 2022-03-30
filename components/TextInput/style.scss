@@ -1,0 +1,80 @@
+@import '../../styles/base';
+
+.wrapper {
+  @extend %input--wrapper;
+  @extend %type--body;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  font-size: $typeBase;
+  justify-content: stretch;
+
+  &:hover {
+    @extend %input--wrapper--hover;
+
+    .prefix,
+    .suffix {
+      border-color: $cGray200;
+    }
+  }
+
+  &:focus-within {
+    @extend %input--wrapper--focus;
+
+    .prefix,
+    .suffix {
+      border-color: $cGray200;
+    }
+  }
+
+  &.wrapperDisabled {
+    @extend %input--wrapper--disabled;
+
+    .prefix,
+    .suffix {
+      border-color: $cGray400;
+    }
+  }
+
+  &.wrapperError,
+  &.wrapperError:hover {
+    @extend %input--wrapper--error;
+
+    .prefix,
+    .suffix {
+      border-color: $cWarningRed;
+    }
+  }
+}
+
+.input {
+  @extend %input;
+  @extend %type--body;
+
+  border: 0;
+  flex: 1 1 auto;
+  outline: none;
+
+  &:disabled {
+    @extend %input--disabled;
+  }
+}
+
+.prefix,
+.suffix {
+  border: 0 solid $cGray300;
+  background-color: $cGray600;
+  flex: 0 0 auto;
+  padding: 10px;
+}
+
+.suffix {
+  border-left-width: 1px;
+  border-radius: 0 $inputRadius $inputRadius 0;
+}
+
+.prefix {
+  border-right-width: 1px;
+  border-radius: $inputRadius 0 0 $inputRadius;
+}

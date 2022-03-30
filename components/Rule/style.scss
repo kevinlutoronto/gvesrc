@@ -1,0 +1,24 @@
+@import "../../styles/base";
+
+.wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-top: 1px solid $cBorder;
+  margin: 0;
+  margin-bottom: 20px;
+  background: none;
+  height: 1px;
+}
+
+.withTopMargin {
+  margin-top: 20px;
+}
+
+.dotted {
+  border-top: 1px dotted $cBorder;
+}
+
+.dashed {
+  border-top: 1px dashed $cBorder;
+}

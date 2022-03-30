@@ -1,0 +1,56 @@
+@import '../../styles/base';
+
+.card {
+  background: white;
+  padding: $space40;
+  min-height: 20px;
+  border: 1px solid $cBorder;
+  margin-bottom: $space30;
+  border-radius: $borderRadius;
+  .default, .expanded {
+    transition: max-height 0.2s, opacity 0.2s;
+  }
+  .default {
+    opacity: 1;
+  }
+  .expanded {
+    opacity: 0;
+  }
+  &.isExpanded {
+    .default {
+      opacity: 0;
+    }
+    .expanded {
+      opacity: 1;
+    }
+  }
+}
+
+.condensed {
+  padding: $space30;
+}
+
+.borderDashed {
+  border: 1px dashed $cBorder;
+}
+
+.borderRed {
+  border-color: $cRed70;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.cardActions {
+  display: flex;
+  *  {
+    margin-right: 20px;
+  }
+  :last-child {
+    margin-right: 0;
+  }
+}

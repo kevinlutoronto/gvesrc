@@ -1,0 +1,52 @@
+@import '../../styles/base';
+
+.card {
+  background: white;
+  min-height: 20px;
+  border: 1px solid $cBorder;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  display: flex;
+
+  &.vertical {
+    flex-direction: column;
+  }
+}
+
+.first {
+  padding: 40px 40px;
+  flex-basis: 25%;
+  background: rgba($cWhite, .7);
+  border-right: 1px solid $cBorder;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.vertical {
+  .first {
+    border-right: 0;
+    border-bottom: 1px solid $cBorder;
+    flex: 1 0 default;
+    padding-bottom: $space20;
+  }
+}
+
+.second {
+  padding: 40px;
+  flex-grow: 1;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+@media only screen and (min-device-width : 1px) and (max-device-width : 1024px) {
+  .card {
+    flex-direction: column;
+  }
+  .first {
+    border-right: 0;
+    border-bottom: 1px solid $cBorder;
+    flex: 1 0 default;
+    padding-bottom: $space20;
+  }
+}
+

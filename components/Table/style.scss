@@ -1,0 +1,121 @@
+@import '../../styles/base';
+
+.table {
+  @extend %type--label;
+  width: 100%;
+  display: table;
+  border: none;
+  margin-bottom: $space20;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  background: $cBackground;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  table {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}
+
+.tbody {
+  overflow: scroll;
+}
+
+.row {
+  display: table-row;
+  background: #fff;
+  border: 1px solid $cBorder;
+  &.header {
+    box-sizing: border-box;
+    background: $cWhite;
+    border: 1px solid $cBorder;
+    border-bottom: 1px solid $cBorderDark;
+    border-radius: 3px 0 0 3px;
+    th {
+      padding-top: 0;
+      padding-bottom: 0;
+      font-weight: bold;
+      font-size: 13px;
+      height: 60px;
+      position: relative;
+      vertical-align: middle;
+      box-sizing: border-box;
+      white-space : nowrap;
+      &.condensed {
+
+      }
+      &.sortableColumn {
+        cursor: pointer;
+      }
+      &:hover {
+        .sortableColumnHighlight {
+          display: block;
+        }
+      }
+      &:active {
+        .sortableColumnHighlight {
+          background-color: darken($cBrandYellow, 5%);
+        }
+      }
+      .sortableColumnHighlightSelected {
+        display: block;
+        background-color: $cBrandYellow;
+      }
+    }
+  }
+}
+
+.rowDisabled {
+  background: $cGray600;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.highlightable {
+  &:hover {
+    background: $cWhite;
+  }
+}
+
+.sortableColumnHighlight {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: $cBrandYellow;
+}
+
+.cell {
+  padding: 10px 20px;
+  display: table-cell;
+  text-align: left;
+  line-height: 1.2em;
+  &.condensedCell {
+    padding: 10px 10px;
+  }
+}
+
+.headerCell {
+  text-align: right;
+}
+
+.emptyText, .loadingText {
+  display: block;
+  padding: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: $cGray400;
+}

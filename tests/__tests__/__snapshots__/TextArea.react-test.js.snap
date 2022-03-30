@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea Component render 1`] = `
+<div
+  className="wrapper"
+>
+  <textarea
+    className="textarea"
+    disabled={undefined}
+    maxLength={undefined}
+    onBlur={[Function]}
+    onChange={undefined}
+    onFocus={[Function]}
+    placeholder=""
+    rows="3"
+    value={undefined}
+  />
+</div>
+`;

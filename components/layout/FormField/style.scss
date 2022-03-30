@@ -1,0 +1,23 @@
+@import '../../../styles/base';
+
+.wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.disabled {
+  @extend %input--disabled;
+}
+
+.disabledWrapper {
+  @extend %input--wrapper--disabled;
+}
+
+.error {
+  font-weight: bold;
+  font-size: 11px;
+  color: $cWarningRed;
+  margin-top : 5px;
+}

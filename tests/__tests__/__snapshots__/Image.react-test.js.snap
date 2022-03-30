@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Component render 1`] = `
+<div
+  style={
+    Object {
+      "height": "auto",
+      "width": "200px",
+    }
+  }
+>
+  <img
+    alt="Image"
+    className="image"
+    onClick={undefined}
+    onError={[Function]}
+    onLoad={undefined}
+    src="https://cdn.spacetelescope.org/archives/images/screen/s82e5407.jpg"
+    style={undefined}
+  />
+</div>
+`;
